@@ -6,6 +6,9 @@ var myApp = angular.module('myApp', [
 myApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/speakers', {
     templateUrl: 'speakers.ejs',
+    controller: 'SpeakersController'
+  }).when('/home', {
+    templateUrl: 'index.ejs',
     controller: 'HomeController'
   }).when('/speakers/:speakerId', {
     templateUrl: 'speakers.ejs',
