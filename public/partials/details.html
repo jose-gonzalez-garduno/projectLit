@@ -1,0 +1,12 @@
+<section class="artistinfo">
+  <div class="artist cf" ng-model="artists">
+    <div class="info">
+      <a href="#!/details/{{prevItem}}" class="btn btn-left">&lt;</a>
+      <a href="#!/details/{{nextItem}}" class="btn btn-left">&gt;</a>
+      <h1>{{artists[whichItem].name}}</h1>
+      <img ng-src="images/{{artists[whichItem].shortname}}_tn.jpg" alt="Photo of {{ artists[whichItem].name }}"/>
+      <div class="bio">{{artists[whichItem].bio}}</div>
+    </div>
+    <a href="index.html">&laquo; Back to Home Page </a>
+  </div>
+</section>
