@@ -4,11 +4,11 @@ var myApp = angular.module('myApp', [
 ]);
 
 myApp.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/home', {
-    templateUrl: 'partials/main.html',
+  $routeProvider.when('/speakers', {
+    templateUrl: 'speakers.ejs',
     controller: 'HomeController'
-  }).when('/speakers', {
-    templateUrl: 'partials/speakers.html',
+  }).when('/speakers/:speakerId', {
+    templateUrl: 'speakers.ejs',
     controller: 'SpeakersController'
   }).otherwise({
     redirectTo: '/home'
