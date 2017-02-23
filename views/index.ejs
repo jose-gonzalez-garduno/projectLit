@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
   <head><% include partials/template/head.ejs %></head>
-  <body class="{{scope.page}}">
+  <body class="{{page}}">
     <% include partials/template/header.ejs %>
-    <% include partials/content/speakerslist.ejs %>
+    <ng-include src="'partials/content/speakerslist.html'"></ng-include>
     <section class="layout">
       <div class="primary" ng-view>
 
