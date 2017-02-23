@@ -4,15 +4,17 @@
         <article class="artist group" ng-repeat="item in speakers">
           <h3>{{item.title}}
             <span class="small">with
-              <a href="/speakers/{{item.shortname}}">
+              <a href="#!/speakers/{{item.shortname}}">
                 {{item.name}}
               </a>
             </span>
           </h3>
           <p>
-            <a href="/speakers/{{item.shortname}}">
+            <a href="#!/speakers/{{item.shortname}}">
               <img class="speaker" src="/images/speakers/{{item.shortname}}_tn.jpg" alt="Photo of {{item.shortname}}"/>
             </a>
+            <p ng-show="summary">{{item.summary}}</p>
+            <p ng-show="description">{{item.description}}</p>
           </p>
         </article>
     </div>
