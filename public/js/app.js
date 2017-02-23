@@ -11,8 +11,8 @@ myApp.config(['$routeProvider', function($routeProvider) {
     templateUrl: 'partials/speakers.html',
     controller: 'SpeakersController'
   }).when('/speakers/:speakerId', {
-    templateUrl: 'partials/speakers.html'
-    // controller: 'SpeakersController'
+    templateUrl: 'partials/speakers.html',
+    controller: 'DetailsController'
   }).otherwise({
     redirectTo: '/home'
   });

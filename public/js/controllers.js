@@ -26,3 +26,14 @@ artistControllers.controller('SpeakersController', ['$scope', '$http', function(
            console.log('HTTP request failed with result: ' + err);
        });
 }]);
+
+artistControllers.controller('DetailsController', ['$scope', '$http', '$speakerId', function($scope, $http, $speakerId) {
+   $http.get('js/data.json')
+       .then(function(res) {
+           $scope.speakers = res.data;
+           $scope.page = 'artistList';
+           $scope.description = true;
+       }, function(err) {
+           console.log('HTTP request failed with result: ' + err);
+       });
+}]);
