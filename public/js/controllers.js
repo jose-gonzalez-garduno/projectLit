@@ -27,7 +27,7 @@ artistControllers.controller('SpeakersController', ['$scope', '$http', function(
        });
 }]);
 
-artistControllers.controller('DetailsController', ['$scope', '$http', '$speakerId', function($scope, $http, $speakerId) {
+artistControllers.controller('DetailsController', ['$scope', '$http', function($scope, $http) {
    $http.get('js/data.json')
        .then(function(res) {
            $scope.speakers = res.data;
